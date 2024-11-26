@@ -10,13 +10,13 @@ use CodeIgniter\Router\RouteCollection;
 
 $routes->get('/', 'Home::index');
 
-//news
-$routes->get('news', [News::class, 'index']);
-$routes->get('news/(:segment)', [News::class, 'show']);
-
 //add news
 $routes->get('news/new', [News::class, 'new']);
 $routes->post('news', [News::class, 'create']);
+
+//news
+$routes->get('news', [News::class, 'index']);
+$routes->get('news/(:segment)', [News::class, 'show']);
 
 //pages
 $routes->get('pages', [Pages::class, 'index']);
